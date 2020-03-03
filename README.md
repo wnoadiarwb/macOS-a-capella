@@ -4,7 +4,7 @@ This python project allows a mac computer to randomly generate phonetic composit
 # Usage
 1. (Presuming you have python installed) run the python program <i>sing</i>; I use terminal with the following commands:\
 ``$ cd [path to python project]``\
-``$ python sing``\
+``$ python sing`` \
 2. Tell your mac to read the output file. This can be done in terminal with:\
 ``$ say -f out.txt``\
 or by opening out.txt, right clicking, and selecting speech>start speaking
