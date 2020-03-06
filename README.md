@@ -7,7 +7,7 @@ This python project allows a mac computer to randomly generate phonetic composit
 ``$ python sing.py`` 
 2. Tell your mac to read the output file. This can be done in terminal with:\
 ``$ say -f out.txt``\
-or by opening out.txt, right clicking, and selecting speech>start speaking
+or by opening out.txt, right clicking, and selecting speech>start speaking.
 
 # Resources
 A programming guide for the macOS speech synthesis API can be found here: http://mirror.informatimago.com/next/developer.apple.com/documentation/UserExperience/Conceptual/SpeechSynthesisProgrammingGuide/SpeechSynthesisProgrammingGuide.pdf \
