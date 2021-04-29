@@ -1,8 +1,14 @@
 import random
 import sys
+import subprocess
+import argparse
 
 # MacOS A Cappella
 # by Otto Benson, 2/27/20
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--live", help="perform the piece live", action="store_true")
+args = parser.parse_args()
 
 # North American English phonemes
 phonemes = ["AE","EY","AO","AX","IY","EH","IH","AY","IX","AA","UW","UH","UX","OW","AW","OY"]
@@ -49,6 +55,10 @@ for i in range(random.randint(1200, 1500)):
 
 tune = tune + "\n[[inpt TEXT]]"
 
-sys.stdout = open('out.txt','w')
-print (tune)
-sys.stdout.close()
+if args.live:
+    p = subprocess.Popen(["say", "-f", "-"], stdin=subprocess.PIPE, universal_newlines=True)
+    p.communicate(tune)
+else:
+    sys.stdout = open('out.txt','w')
+    print (tune)
+    sys.stdout.close()
